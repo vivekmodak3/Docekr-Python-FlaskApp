@@ -19,27 +19,6 @@ It demonstrates key DevOps concepts:
 
 ---
 
-## 🏗 Architecture
-
-\`\`\`
-                 +------------------------+
-                 |      User Browser      |
-                 +-----------+------------+
-                             |
-                             v
-                    EXPOSE 5000 (Docker)
-                             |
-                 +-----------+------------+
-                 |     Docker Container   |
-                 |  - Python 3.10 Image   |
-                 |  - Flask Application   |
-                 +-----------+------------+
-                             |
-                             v
-                      Host Machine
-\`\`\`
-
----
 
 ## 🧰 Tech Stack
 
@@ -55,16 +34,17 @@ It demonstrates key DevOps concepts:
 
 ## 📂 Repository Structure
 
-\`\`\`
-Docker-Python-FlaskApp/
-│── Demo.sh
-│── Dockerfile
-│── Readme.md
+```
+flask-docker-application/
 │── app.py
-└── requirements.txt
-\`\`\`
+│── requirements.txt
+│── Dockerfile
+│── README.md
+└── images/ (optional screenshots)
+```
 
 ---
+
 
 ## 📦 Prerequisites
 
@@ -78,26 +58,28 @@ Ensure the following are installed:
 
 ## 🐳 Docker Setup
 
+
 ### 1️⃣ Build Docker Image
 
-\`\`\`bash
-docker build -t Docker-Python-FlaskApp .
-\`\`\`
+```bash
+docker build -t flask-docker-app .
+```
 
 ### 2️⃣ Run Container
 
-\`\`\`bash
-docker run -p 5000:5000 Docker-Python-FlaskApp
-\`\`\`
+```bash
+docker run -p 5000:5000 flask-docker-app
+```
 
 ### 3️⃣ Access Application
 
-\`\`\`
+```
 curl localhost:5000
 http://localhost:5000/
-\`\`\`
+```
 
 ---
+
 
 ## ⚡ Automated Execution Script
 
@@ -109,28 +91,28 @@ To automate the process of building, running, and verifying the container, you c
 3. **Waits** 20 seconds to ensure the Flask server is fully initialized.
 4. **Verifies** the deployment by sending a \`curl\` request to localhost.
 
-======================================
-Make the script executable and run it:
-======================================
 
-\`\`\`bash
+### Make the script executable and run it:
+
+```
 chmod +x Demo.sh
-./run.sh
-\`\`\`
+./Demo.sh
+```
 
 ---
 
 ### **Browser Output**
 
-
+```text
 ==============================
  Welcome to Dockerized Flask App
 ==============================
 
 Your Python application is successfully running inside Docker 🎉
-\`\`\`
+```
 
 ---
+
 
 ## 🔧 Useful Docker Commands
 
