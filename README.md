@@ -1,7 +1,7 @@
 # Docker-Python-FlaskApp
 
 A beginner-friendly and production-ready project that demonstrates how to containerize a simple **Flask web application** using **Docker**.  
-This project is ideal for DevOps learners and engineers preparing for real-world Docker + CI/CD workflows used in MNCs.
+
 
 ---
 
