@@ -36,11 +36,11 @@ It demonstrates key DevOps concepts:
 
 ```
 flask-docker-application/
-│── app.py
-│── requirements.txt
+│── Demo.sh
 │── Dockerfile
 │── README.md
-└── images/ (optional screenshots)
+│── app.py
+└── requirements.txt
 ```
 
 ---
